@@ -1,0 +1,23 @@
+.header_button {
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    background-color: #f15c6f;
+    padding: 5px 100px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-family: ProximaNovaBold,Arial,Verdana,Tahoma,sans-serif;
+    text-transform: uppercase;
+  }
+  
+  .header_button:focus {
+    outline: none;
+  }
+  
+  @media (max-width: 767px) {
+    .header_button {
+      margin: 15px auto;
+      display: block;
+      padding: 7px 100px;
+    }
+  }

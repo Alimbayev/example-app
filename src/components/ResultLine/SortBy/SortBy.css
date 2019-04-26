@@ -1,0 +1,35 @@
+.sort_by {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+  }
+  
+  .sort_by__span {
+    font-family: ProximaNovaBold,Arial,Verdana,Tahoma,sans-serif;
+    font-size: 20px;
+  }
+  
+  @media (max-width: 1365px) {
+    .sort_by {
+      width: 30%;
+    }
+  }
+  
+  @media (max-width: 1199px) {
+    .sort_by {
+      width: 40%;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .sort_by {
+      width: 48%;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .sort_by {
+      width: 90%;
+      margin-top: 15px;
+    }
+  }

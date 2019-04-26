@@ -1,0 +1,64 @@
+.header {
+    height: 30vh;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 3;
+    padding: 1% 15%;
+    min-height: 260px;
+}  
+    .header__find_your_movie {
+      margin-top: 4%;
+      margin-bottom: 2%;
+      display: block;
+      position: relative;
+      z-index: 3;
+    }  
+      .header__find_your_movie_span {
+        font-family: ProximaNovaBold,Arial,Verdana,Tahoma,sans-serif;
+        color: #fff;
+        font-size: 25px;
+      }
+
+  .header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+  }
+  
+  .header__search_controls {
+    position: inherit;
+    z-index: inherit;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  @media (max-width: 1599px) {
+    .header {
+      padding: 1% 10%;
+    }
+  }
+  
+  @media (max-width: 1199px) {
+    .header {
+      padding: 1% 5%;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .header {
+      padding: 1% 5%;
+      height: 32vh;
+    }
+  
+    .header__search_controls {
+      display: block;
+    }
+  }

@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header/Header'; // no
+import ResultLine from './components/ResultLine/ResultLine'; //no
+import MoviesGrid from './components/MoviesGrid/MoviesGrid'; //no
+import Footer from './components/Footer/Footer'; //no
+import ErrorBoundary from './ErrorBoundary'; //no
+import styles from './App.css'; //no
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <main className={styles.main}>
+    <ErrorBoundary>
+      <Header />
+      <ResultLine />
+      <MoviesGrid />
+      <Footer />
+    </ErrorBoundary>
+  </main>
+
+);
 
 export default App;

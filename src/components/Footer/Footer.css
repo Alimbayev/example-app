@@ -1,0 +1,25 @@
+.footer {
+    background-color: #414141;
+    padding: 1% 15%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  @media (max-width: 1599px) {
+    .footer {
+      padding: 1% 10%;
+    }
+  }
+  
+  @media (max-width: 1199px) {
+    .footer {
+      padding: 1% 5%;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .footer {
+      padding: 1% 5%;
+    }
+  }
