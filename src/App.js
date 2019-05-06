@@ -7,15 +7,12 @@ import ErrorBoundary from './ErrorBoundary'; //no
 import styles from './App.css'; //no
 
 const App = () => (
-  <main className={styles.main}>
-    <ErrorBoundary>
+    <React.Fragment>
       <Header />
       <ResultLine />
       <MoviesGrid />
       <Footer />
-    </ErrorBoundary>
-  </main>
-
+    </React.Fragment>
 );
 
 export default App;

@@ -1,8 +1,9 @@
 import {
-    DATA_REQUEST,
-    DATA_SUCCESS,
-    DATA_ERROR,
-  } from './moviesActions';
+  DATA_REQUEST,
+  DATA_SUCCESS,
+  DATA_ERROR,
+  FETCH_MOVIES_REQUEST, FETCH_MOVIES_SUCCESS
+} from './moviesActions';
   
   const initialState = {
     allMovies: [],
@@ -16,39 +17,13 @@ import {
     sortBy: 'release_date',
   };
   
-  const moviesReducer = (state = initialState, action) => {
-    switch (action.type) {
-      case DATA_SUCCESS:
-        return {
-          ...state,
-          isFetchingMovies: false,
-          isFetchedMovies: true,
-          allMovies: action.payload.offset === 0
-            ? action.payload.movies
-            : state.allMovies.concat(action.payload.movies),
-          url: action.payload.url,
-          ...action.payload,
-          errorMovies: '',
-        };
-      case DATA_REQUEST:
-        return {
-          ...state,
-          isFetchingMovies: true,
-          isFetchedMovies: false,
-        };
-      case DATA_ERROR:
-        return {
-          ...state,
-          errorMovies: action.payload,
-          isFetchingMovies: false,
-          isFetchedMovies: false,
-          allMovies: [],
-        };
-      default:
-        return {
-          ...state,
-        };
-    }
-  };
+function movieReducer(state = initialState, action) {
+  if (action.type === FETCH_MOVIES_SUCCESS) {
+    return Object.assign({}, state, {
+      allMovies: state.allMovies.concat(action.payload)
+    });
+  }
+  return state;
+}
   
-  export default moviesReducer;
+  export default movieReducer;

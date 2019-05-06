@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import MoviesGrid from './MoviesGrid';
-import { fetchDefaultMovies, fetchNextMovies } from '../../modules/movies/moviesActions';
+import {fetchMovies, fetchNextMovies} from '../../modules/movies/moviesActions';
 import { getMovies, getIsFetchingMovies, getIsFetchedMovies } from '../../modules/movies/moviesSelectors';
 
 const mapStateToProps = state => ({
@@ -9,8 +9,8 @@ const mapStateToProps = state => ({
   isFetchedMovies: getIsFetchedMovies(state),
 });
 
-const mapDispatchToProps = {
-  fetchDefaultMovies,
-  fetchNextMovies,
-};
+const mapDispatchToProps = dispatch => ({
+  fetchDefaultMovies: () => dispatch(fetchMovies()),
+});
+
 export default connect(mapStateToProps, mapDispatchToProps)(MoviesGrid);
